@@ -34,6 +34,7 @@ Rails.application.routes.draw do
 
   resources :orders do
     member do
+      post :apply_to_cancel
       post :pay_with_alipay
       post :pay_with_wechat
     end

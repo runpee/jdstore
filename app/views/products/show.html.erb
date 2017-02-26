@@ -1,12 +1,33 @@
-<div class="row">
-  <div class="col-md-6">
-    <% if @product.image.present? %>
-      <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
-    <% else %>
-      <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
-    <% end %>
+
+
+<div class="productDetail">
+  <div class="productDetail-left">
+    <div class="productDetail-left-bigImage">
+      <% if @product.image.present? %>
+        <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
+      <% else %>
+        <%= image_tag("https://ww4.sinaimg.cn/large/006y8lVagy1fd3q2abf62j30bo0bodg3.jpg", class: "thumbnail") %>
+      <% end %>
+    </div>
+    <div class="productDetail-left-imageList">
+      <div class="productDetail-left-imageList-item">
+        <img src="https://ww4.sinaimg.cn/large/006y8lVagy1fd3ptxl9s1j3020020we9.jpg" alt="pic1">
+      </div>
+      <div class="productDetail-left-imageList-item">
+        <img src="https://ww4.sinaimg.cn/large/006y8lVagy1fd3ptxl9s1j3020020we9.jpg" alt="pic1">
+      </div>
+      <div class="productDetail-left-imageList-item">
+        <img src="https://ww4.sinaimg.cn/large/006y8lVagy1fd3ptxl9s1j3020020we9.jpg" alt="pic1">
+      </div>
+      <div class="productDetail-left-imageList-item">
+        <img src="https://ww4.sinaimg.cn/large/006y8lVagy1fd3ptxl9s1j3020020we9.jpg" alt="pic1">
+      </div>
+      <div class="productDetail-left-imageList-item productDetail-left-imageList-lastItem">
+        <img src="https://ww4.sinaimg.cn/large/006y8lVagy1fd3ptxl9s1j3020020we9.jpg" alt="pic1">
+      </div>
+    </div>
   </div>
-  <div class="col-md-6">
+  <div class="productDetail-right">
     <h2> <%= @product.title %> </h2>
     <div style="height:100px;">
       <p>
@@ -15,13 +36,23 @@
     </div>
     <div> 数量 : <%= @product.quantity %> </div>
     <div class="product-price"> ￥ <%= @product.price %> </div>
-    <div class="pull-right">
+    <div class="pull-left">
 
       <% if @product.quantity.present? && @product.quantity > 0 %>
-        <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post,:class => "btn btn-primary btn-lg btn-danger") %>
+        <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post,:class => "btn btn-primary btn-sm btn-danger") %>
       <% else %>
         此商品已售罄，无法购买，出门左转，欢迎下次再来
-      <% end %>    
+      <% end %>
     </div>
+  </div>
+</div>
+
+<div class="productDecription">
+  <div class="productDecription-menuList bg-color1">
+    <div class="productDecription-menuList-item">商品详情</div>
+    <!-- <div class="productDecription-menuList-item">用户评价</div> -->
+  </div>
+  <div class="productDecription-content">
+    <img src="https://ww1.sinaimg.cn/large/006tKfTcgy1fd3qtpd10dj30uk088q35.jpg" alt="">
   </div>
 </div>

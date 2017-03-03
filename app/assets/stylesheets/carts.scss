@@ -1,3 +1,110 @@
 // Place all the styles related to the carts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*5种背景颜色*/
+.bg-color1 {
+  background: black;
+}
+
+.bg-color2 {
+  background: #A1887F;
+}
+
+.bg-color3 {
+  background: #FFE066;
+}
+
+.bg-color4 {
+  background: #247BA0;
+}
+
+.bg-color5 {
+  background: #70C1B3;
+}
+
+
+.row{
+  width: 1500px;
+  margin: 0 auto;
+}
+
+.cart-title{
+  border-bottom: 4px solid #BDBDBD;
+  background-color: #E0E0E0;
+  width: 1500px;
+  height: 80px;
+}
+
+.cartContent{
+  width: 1500px;
+  height: 100px;
+  background-color:rgb(255,253,238);
+  margin-bottom: 10px;
+}
+
+.cartContent-item{
+  width: 240px;
+  float: left;
+  height: 100px;
+  margin: 0px 25px;
+}
+
+.cartContent-item-pic{
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin: 5px 20px;
+}
+
+.cartContent-title{
+  margin: 20px 25px;
+  float: left;
+  width: 240px;
+  height: 60px;
+}
+
+.cartContent-header{
+  margin-bottom: 10px;
+  width: 1500px;
+  height: 100px;
+  border-bottom: 4px solid #E0E0E0;
+}
+
+.sp{
+  font-size: 20px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.sn{
+  text-align:center;
+  line-height:100px;//这个好坑。。
+}
+
+.s3{
+  width: 1500px;
+  height: 50px;
+  background-color:#FEF4F2;
+}
+
+.s4{
+  border:8px solid #FEF4F2;
+  width: 1500px;
+  height: 100px;
+  margin-top: 10px;
+  background-color: rgb(255,253,238);
+}
+
+.sa{
+  margin-left: 50px;
+  line-height:84px;
+  color: #666;
+  cursor: pointer;
+}
+
+.checkout{
+  line-height: 84px;
+  float: right;
+  margin-right: 30px;
+}

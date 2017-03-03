@@ -1,0 +1,207 @@
+@charset "UTF-8";
+/* line 6, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.navbar {
+  margin-bottom: 0;
+}
+
+/* line 9, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.loadingpage {
+  margin-bottom: 0;
+  margin-top: 0;
+  width: 100%;
+  border: none;
+}
+
+/*头部*/
+/* line 18, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.header {
+  width: 1200px;
+  margin: 20px auto;
+}
+
+/* line 23, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.headerContent {
+  height: 60px;
+}
+
+/* line 27, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.headerContent-item {
+  height: 60px;
+}
+
+/* line 31, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.headerContent-item1 {
+  float: left;
+  width: 180px;
+  margin-right: 180px;
+}
+
+/* line 37, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.headerContent-item2 {
+  float: left;
+  width: 400px;
+}
+
+/* line 42, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.headerContent-item3 {
+  float: right;
+  width: 150px;
+}
+
+/* line 47, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.content-section .video-section {
+  width: 1200px;
+  max-height: 1300px;
+  padding: 110px 0 32px;
+}
+
+/* line 56, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.video-section .pattern-overlay {
+  background-color: rgba(71, 71, 71, 0.3);
+  padding: 110px 0 32px;
+  min-height: 500px;
+  width: 1200px;
+  margin: 0 auto;
+  /* Incase of overlay problems just increase the min-height*/
+}
+
+/* line 65, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.video-section h2, .video-section h3, .video-section h5 {
+  text-align: center;
+  color: #fff;
+}
+
+/* line 69, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.video-section h2 {
+  font-size: 110px;
+  font-family: 'Buenard', serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 40px auto 0px;
+  text-shadow: 1px 1px 1px #000;
+  -webkit-text-shadow: 1px 1px 1px #000;
+  -moz-text-shadow: 1px 1px 1px #000;
+}
+
+/* line 79, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.video-section h3 {
+  font-size: 25px;
+  font-weight: lighter;
+  margin: 30px auto 15px;
+  font-weight: bold;
+}
+
+/* line 85, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.video-section .buttonBar {
+  display: none;
+}
+
+/* line 86, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.player {
+  font-size: 1px;
+}
+
+/*商品列表*/
+/* line 90, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.productList {
+  margin: 20px auto;
+  width: 1200px;
+  overflow: hidden;
+}
+
+/* line 96, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.productList-item {
+  float: left;
+  width: 228px;
+  height: 250px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+/* line 104, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.productList-lastItem {
+  margin-right: 0;
+}
+
+/*5种背景颜色*/
+/* line 109, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.bg-color1 {
+  background: #50514F;
+}
+
+/* line 113, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.bg-color2 {
+  background: #F25F5C;
+}
+
+/* line 117, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.bg-color3 {
+  background: #FFE066;
+}
+
+/* line 121, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.bg-color4 {
+  background: #247BA0;
+}
+
+/* line 125, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.bg-color5 {
+  background: #70C1B3;
+}
+
+/*菜单*/
+/* line 130, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.menu {
+  width: 100%;
+}
+
+/* line 134, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.menuList {
+  width: 1200px;
+  margin: 20px auto;
+  height: 42px;
+}
+
+/* line 140, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.menuList-item {
+  float: left;
+  width: 108px;
+  height: 42px;
+}
+
+/*排序*/
+/* line 148, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.orderList {
+  margin: 20px auto;
+  width: 1200px;
+  overflow: hidden;
+}
+
+/* line 154, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.orderList-item {
+  float: left;
+  width: 108px;
+  height: 42px;
+}
+
+/*商品列表*/
+/* line 161, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.productList {
+  margin: 20px auto;
+  width: 1200px;
+  overflow: hidden;
+}
+
+/* line 167, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.productList-item {
+  float: left;
+  width: 228px;
+  height: 250px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+/* line 175, /Users/liang/jd5/jdstore/app/assets/stylesheets/welcome.scss */
+.productList-lastItem {
+  margin-right: 0;
+}

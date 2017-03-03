@@ -41,6 +41,10 @@
 	height: 518px;
 }
 
+.productDetailcontent{
+  margin-left: 30px;
+}
+
 .productDetail-left-bigImage {
 	width: 420px;
 	height: 420px;
@@ -65,23 +69,26 @@
 .productDecription {
 	width: 1200px;
 	margin: 20px auto;
-	border: 1px solid #50514F;
+  border-top: 2px solid #BDBDBD;
+  border-bottom: 2px solid #BDBDBD;
 }
 
 .productDecription-menuList {
-	height: 35px;
+	height: 50px;
+  background-color: #E0E0E0;
 }
 
 .productDecription-menuList-item {
 	float: left;
 	width: 175px;
-	height: 35px;
-  line-height: 35px;
+	height: 50px;
+  line-height: 50px;
   text-align: center;
+  font-size: 20px;
 }
 
 .productDecription-content {
-	width: 1200px;
-	height: 300px;
-	margin: 50px auto;
+	width: 800px;
+	height: auto;
+	margin: 10px auto;
 }

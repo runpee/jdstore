@@ -1,55 +1,49 @@
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
+<div class="navbar bg-color1">
+  <div class="navbarContent">
+    <div class="navbarContent-item bg-color1"><a href="/">珠宝店</a></div>
+    <div class="navbarContent-item bg-color1"><a href="/products/5">周大福</a></div>
+    <!-- <%= link_to("iWasher", products_path, class:"navbarContent-item bg-color1") %> -->
+    <div class="navbarContent-item bg-color1"><a href="/products/1">周生生</a></div>
+    <div class="navbarContent-item bg-color1"><a href="/products/index2">周六福</a></div>
+  </div>
+    <div class="navbarContent-LastItem bg-color1 collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-          <div class="logo"><a href="/">珠宝店</a></div>
+            <ul class="nav navbar-nav navbar-right">
 
-          
+                <div class="cart-wrap">
+                  <div class="cart">
+                    <%= link_to carts_path do %>
+                       <i class="fa fa-shopping-cart cart-icon "></i>我的购物车( <%= current_cart.products.count %> ) &gt;
+                    <% end %>
+                  </div>
+                </div>
 
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                <ul class="nav navbar-nav navbar-right">
-
-                    <div class="cart-wrap">
-                      <div class="cart">
-                        <%= link_to carts_path do %>
-                           <i class="fa fa-shopping-cart cart-icon "></i>我的购物车( <%= current_cart.products.count %> ) &gt;
+                  <% if !current_user %>
+                    <li><%= link_to("注册",new_user_registration_path) %></li>
+                    <li><%= link_to(content_tag(:i,"登入",class:"fa fa-sign-in"),new_user_session_path) %></li>
+                  <% else %>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Hello,<%= current_user.email %>
+                        <b class="caret"></b>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <% if current_user.is_admin? %>
+                          <li>
+                            <%= link_to("Admin",admin_products_path) %>
+                          </li>
                         <% end %>
-                      </div>
-                    </div>
-
-                      <% if !current_user %>
-                        <li><%= link_to("注册",new_user_registration_path) %></li>
-                        <li><%= link_to(content_tag(:i,"登入",class:"fa fa-sign-in"),new_user_session_path) %></li>
-                      <% else %>
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Hello,<%= current_user.email %>
-                            <b class="caret"></b>
-                          </a>
-                          <ul class="dropdown-menu">
-                            <% if current_user.is_admin? %>
-                              <li>
-                                <%= link_to("Admin",admin_products_path) %>
-                              </li>
-                            <% end %>
-                            <li>
-                              <%= link_to("个人订单列表", account_orders_path ) %>
-                            </li>
-                            <li><%= link_to(content_tag(:i, "登出",class:"fa fa-sign-out"),destroy_user_session_path,method:"delete") %></li>
-                          </ul>
+                        <li>
+                          <%= link_to("个人订单列表", account_orders_path ) %>
                         </li>
-                      <% end %>
+                        <li><%= link_to(content_tag(:i, "登出",class:"fa fa-sign-out"),destroy_user_session_path,method:"delete") %></li>
+                      </ul>
+                    </li>
+                  <% end %>
 
-                </ul>
+            </ul>
 
-          </div>
+      </div>
 
-        </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-
-    </div>
-    <!-- /.container-fluid -->
-</nav>
+</div>

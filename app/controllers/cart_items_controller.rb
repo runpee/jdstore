@@ -19,11 +19,12 @@ class CartItemsController < ApplicationController
       @cart_item.update(cart_item_params)
       flash[:notice] = "成功更新数量"
     else
-      flash[:warning] = "商品存货不足以加入购物车"  
+      flash[:warning] = "商品存货不足以加入购物车"
     end
 
     redirect_to carts_path
   end
+
 
   private
 

@@ -6,15 +6,10 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    # @photos = @product.photos.all
-    # @prints = @product.prints.all
-    # if @product.huangjin?
-    #   render 'products/huangjin'
-    # elsif @product.shoushi?
-    #   render 'products/shoushi'
-    # elsif @product.zhuanshi?
-    #   render 'product/zhuanshi'
-    # end
+    if @product.id == 3
+      render '_ZHENAfujie'
+
+    end
   end
 
   def add_to_cart

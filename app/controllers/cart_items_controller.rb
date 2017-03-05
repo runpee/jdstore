@@ -25,11 +25,44 @@ class CartItemsController < ApplicationController
     redirect_to carts_path
   end
 
+  def add_quantity
+		if @cart_item.quantity < @cart_item.product.quantity
+			@cart_item.quantity += 1
+      @cart_item.product.quantity -=1
+			@cart_item.save
+      # redirect_to :back
+      respond_to do |format|
+        format.js   { render :layout => false }
+      end
+		elsif @cart_item.quantity == @cart_item.product.quantity
+			redirect_to carts_path, alert: "库存不足！"
+		end
+	end
+
+	def remove_quantity
+		if @cart_item.quantity > 0
+			@cart_item.quantity -= 1
+      @cart_item.product.quantity +=1
+			@cart_item.save
+      # redirect_to :back
+			respond_to do |format|
+        format.js   { render :layout => false }
+      end
+		elsif @cart_item.quantity == 0
+			redirect_to carts_path, alert: "商品不能少于零！"
+		end
+	end
+
 
   private
 
   def cart_item_params
     params.require(:cart_item).permit(:quantity)
+  end
+
+  def find_cart_item
+    @cart = current_cart
+    @cart_item = @cart.cart_items.find_by(product_id: params[:id])
   end
 
 end

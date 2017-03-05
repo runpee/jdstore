@@ -24,7 +24,7 @@
 }
 
 
-.row{
+.ww{
   width: 1500px;
   margin: 0 auto;
 }
@@ -80,6 +80,7 @@
 .sn{
   text-align:center;
   line-height:100px;//这个好坑。。
+  background-color: red;
 }
 
 .s3{
@@ -107,4 +108,47 @@
   line-height: 84px;
   float: right;
   margin-right: 30px;
+}
+
+// 数量增减按钮
+.countNumber {
+  padding: 0 24px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  .countNumber-btn-disabled {
+  	color: #dfdfdf;
+  }
+  .countNumber-btn {
+  	font-size: 22px;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    overflow: hidden;
+    background: #fff;
+    color: #999;
+    border: 1px solid #e0e0e0;
+  }
+  .countNumber-input {
+   	font-size: 16px;
+    text-align: center;
+    width: 74px;
+    border: 1px solid #e0e0e0;
+    height: 26px;
+    padding: 14px 4px;
+    outline: none;
+   }
+   .countNumber-btn-plus {
+   	  right: 0;
+    	top: 0;
+   }
+   .countNumber-btn-sub {
+  	right: auto;
+    left: 0;
+    top: 0;
+  }
 }

@@ -2,7 +2,7 @@
 
 
 
-  <div class="row">
+  <div class="ww">
 
       <div class="cart-title">
         <div class="cart-title-left">
@@ -52,15 +52,20 @@
           </div>
 
           <div class="cartContent-item">
-            <span class="sn">
-              <% cart_item = current_cart.cart_items.find_by(product_id: cart_item.product_id) %>
 
-            <%= form_for cart_item, url:cart_item_path(cart_item.product_id) do |f| %>
-              <%= f.select :quantity, 1..cart_item.product.quantity %>
-              <%= f.submit "更新", data:{disable_with:"给点耐心我很快就好了..."} %>
-            <% end %>
+
+            <span class="sn countNumber">
+
+
+              <%= link_to("-", remove_quantity_cart_item_path(cart_item.product_id), class: "countNumber-btn countNumber-btn-sub", method: :post, remote: true) %>
+              <input class="countNumber-input" type="text" value="<%= cart_item.quantity %>">
+              <%= link_to("+", add_quantity_cart_item_path(cart_item.product_id), class: "countNumber-btn countNumber-btn-plus", method: :post, remote: true) %>
+
           </span>
+
+
           </div>
+
           <div class="cartContent-item">
             <div class="sn"><%= link_to cart_item_path(cart_item.product_id),method: :delete do %>
               <i class='fa fa-trash'>删除</i>
@@ -84,7 +89,7 @@
 
     <div class="s4">
         <span class="sa">
-          <%= link_to("继续购物",products_path) %>
+          <%= link_to("继续购物",'/') %>
         </span>
         <span class="sa">
           <%= link_to("清空购物车",clean_carts_path,method: :delete,data:{confirm:"你确定要清空整个购物车么？"}) %>

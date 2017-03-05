@@ -39,6 +39,11 @@ Rails.application.routes.draw do
       post :pay_with_wechat
     end
   end
-  resources :cart_items 
+  resources :cart_items do
+    member do
+      post :add_quantity
+      post :remove_quantity
+    end
+  end
 
 end
